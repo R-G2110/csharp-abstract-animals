@@ -6,17 +6,16 @@ using System.Threading.Tasks;
 
 namespace csharp_abstract_animals
 {
-    public class Passerotto : Animale
+    class Passerotto : Animale
     {
-        // Sovrascrizione del metodo Verso nella classe Passerotto
         public override void Verso()
         {
-            Console.WriteLine("Tweet!");
+            Console.Write("cip-cip");
         }
-        // Sovrascrizione del metodo Mangia nella classe Passerotto
+
         public override void Mangia()
         {
-            Console.WriteLine("Mangia semi.");
+            Console.Write("semi");
         }
     }
 }

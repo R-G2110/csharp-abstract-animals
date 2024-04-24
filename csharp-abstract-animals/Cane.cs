@@ -1,16 +1,15 @@
 ﻿namespace csharp_abstract_animals
 {
-    public class Cane : Animale
+    class Cane : Animale
     {
-        // Sovrascrizione del metodo Verso nella classe Cane
         public override void Verso()
         {
-            Console.WriteLine("Bau! Bau!");
+            Console.Write("bau-bau");
         }
-        // Sovrascrizione del metodo Mangia nella classe Cane
+
         public override void Mangia()
         {
-            Console.WriteLine("Mangia carne.");
+            Console.Write("carne");
         }
     }
 }

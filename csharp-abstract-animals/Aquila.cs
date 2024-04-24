@@ -1,16 +1,15 @@
 ﻿namespace csharp_abstract_animals
 {
-    public class Aquila : Animale
+    class Aquila : Animale
     {
-        // Sovrascrizione del metodo Verso nella classe l'Aquila
         public override void Verso()
         {
-            Console.WriteLine("Screech!");
+            Console.Write("screeek");
         }
-        // Sovrascrizione del metodo Mangia nella classe l'Aquila
+
         public override void Mangia()
         {
-            Console.WriteLine("Mangia carne e pesce.");
+            Console.Write("carne");
         }
     }
 }
