@@ -10,7 +10,7 @@
         // Sovrascrizione del metodo Mangia nella classe l'Aquila
         public override void Mangia()
         {
-            Console.WriteLine("Mangia carne.");
+            Console.WriteLine("Mangia carne e pesce.");
         }
     }
 }
