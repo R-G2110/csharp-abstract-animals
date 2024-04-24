@@ -2,7 +2,7 @@
 {
     public abstract class Animale
     {
-        // Metodo Dormi da implementare nella classe astratta
+        // Metodo Dormi implementato nella classe Animale
         public void Dormi()
         {
             Console.WriteLine("Zzz");
