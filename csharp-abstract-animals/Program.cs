@@ -20,13 +20,15 @@ namespace csharp_abstract_animals
             foreach (Animale animale in animali)
             {
                 Console.Write($"\nSono un {animale.GetType().Name} e faccio ");
-                animale.Verso();
-                Console.Write($"\nmangio ");
+                animale.Verso(); 
+                Console.Write($", mangio ");
                 animale.Mangia();
-                Console.Write($"\nE quando dormo faccio ");
+                Console.Write($", e quando dormo faccio ");
                 animale.Dormi();
-                
+                Console.Write(".");
+                Console.WriteLine();
             }
+            Utility.Divider();
 
             //ESERCIZIO 2
             static void FaiVolare(IVolatile animale)
@@ -38,8 +40,7 @@ namespace csharp_abstract_animals
             {
                 animale.Nuota();
             }
-            Console.WriteLine("========================================================================================================================");
-            Console.WriteLine("\nEsercizio 2:");
+            Console.WriteLine("Esercizio 2:");
             IVolatile uccello = new Uccello();
             Console.Write($"\nSono un {uccello.GetType().Name} e ");
             FaiVolare(uccello);
@@ -47,6 +48,7 @@ namespace csharp_abstract_animals
             INuotante pesce = new Pesce();
             Console.Write($"\nSono un {pesce.GetType().Name} e ");
             FaiNuotare(pesce);
+            Utility.Divider();
         }
     }
 }

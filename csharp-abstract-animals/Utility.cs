@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace csharp_abstract_animals
 {
-    public enum Vocale
+    public static class Utility
     {
-        A,
-        E,
-        I,
-        O,
-        U
+        public static void Divider()
+        {
+            Console.WriteLine();
+            Console.WriteLine("\n========================================================================================================================");
+            Console.WriteLine();
+        }
     }
 }

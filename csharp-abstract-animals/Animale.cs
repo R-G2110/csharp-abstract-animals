@@ -4,7 +4,7 @@
     {
         public void Dormi()
         {
-            Console.WriteLine("zzz-zzz");
+            Console.Write("zzz-zzz");
         }
         public abstract void Verso();
 
