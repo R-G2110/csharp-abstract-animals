@@ -3,8 +3,18 @@ using System.Collections.Generic;
 
 namespace csharp_abstract_animals
 {
-    internal class Program
-    {
+    internal class Program 
+    { 
+        static void FaiVolare(IVolante animale)
+        {
+            animale.Vola();
+        }
+
+        static void FaiNuotare(INuotante animale)
+        {
+            animale.Nuota();
+        }
+
         static void Main(string[] args)
         {
             //ESERCIZIO 1
@@ -31,24 +41,53 @@ namespace csharp_abstract_animals
             Utility.Divider();
 
             //ESERCIZIO 2
-            static void FaiVolare(IVolatile animale)
-            {
-                animale.Vola();
-            }
+            //static void FaiVolare(IVolante animale)
+            //{
+            //    animale.Vola();
+            //}
 
-            static void FaiNuotare(INuotante animale)
-            {
-                animale.Nuota();
-            }
+            //static void FaiNuotare(INuotante animale)
+            //{
+            //    animale.Nuota();
+            //}
             Console.WriteLine("Esercizio 2:");
-            IVolatile uccello = new Uccello();
-            Console.Write($"\nSono un {uccello.GetType().Name} e ");
-            FaiVolare(uccello);
+            //IVolante uccello = new Uccello();
+            //Console.Write($"\nSono un {uccello.GetType().Name} e ");
+            //FaiVolare(uccello);
 
-            INuotante pesce = new Pesce();
-            Console.Write($"\nSono un {pesce.GetType().Name} e ");
-            FaiNuotare(pesce);
-            Utility.Divider();
+            //INuotante pesce = new Pesce();
+            //Console.Write($"\nSono un {pesce.GetType().Name} e ");
+            //FaiNuotare(pesce);
+            //Utility.Divider();
+
+            //Aquila aquila = new Aquila();
+            //Delfino delfino = new Delfino();
+            //Cane cane = new Cane();
+            //Passerotto passerotto = new Passerotto();
+            //FaiVolare(passerotto);
+            //FaiVolare(aquila);
+            //FaiNuotare(cane);
+            //FaiNuotare(delfino);
+
+            foreach (Animale animale in animali)
+            {
+                Type[] interfaces = animale.GetType().GetInterfaces();
+                Console.Write($"\nSono un {animale.GetType().Name} e implemento l'interfaccia di ");
+                foreach (Type interfaccia in interfaces)
+                {
+                    Console.Write(interfaccia.Name + ", e quindi ");
+                    if (interfaccia == typeof(IVolante))
+                    {
+                        FaiVolare((IVolante)animale);
+                    }
+                    else if (interfaccia == typeof(INuotante))
+                    {
+                        FaiNuotare((INuotante)animale);
+                    }
+                }
+                Console.WriteLine();
+            }
         }
     }
+
 }

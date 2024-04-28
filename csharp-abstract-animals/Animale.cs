@@ -1,4 +1,6 @@
-﻿namespace csharp_abstract_animals
+﻿using System;
+
+namespace csharp_abstract_animals
 {
     abstract class Animale
     {
@@ -9,7 +11,5 @@
         public abstract void Verso();
 
         public abstract void Mangia();
-        
     }
-
 }

@@ -1,6 +1,6 @@
 ﻿namespace csharp_abstract_animals
 {
-    interface IVolatile
+    interface IVolante
     {
         void Vola();
     }

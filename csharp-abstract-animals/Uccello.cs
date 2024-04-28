@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace csharp_abstract_animals
 {
-    class Uccello : IVolatile
+    class Uccello : IVolante
     {
         public void Vola()
         {

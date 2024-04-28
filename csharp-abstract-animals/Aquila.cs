@@ -1,6 +1,8 @@
-﻿namespace csharp_abstract_animals
+﻿using System;
+
+namespace csharp_abstract_animals
 {
-    class Aquila : Animale
+    class Aquila : Animale, IVolante
     {
         public override void Verso()
         {
@@ -9,7 +11,12 @@
 
         public override void Mangia()
         {
-            Console.Write("carne");
+            Console.Write("carne e pesce");
+        }
+
+        public void Vola()
+        {
+            Console.Write("volo veloce!!!");
         }
     }
 }
